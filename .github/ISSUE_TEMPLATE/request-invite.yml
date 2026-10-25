@@ -1,0 +1,50 @@
+name: Request an invite
+description: Request membership of COSMIC-utils organizations
+title: "I'd like to be added into COSMIC-utils organization"
+labels: ["invite"]
+body:
+  - type: markdown
+    attributes:
+      value: "#### Membership form"
+  - type: markdown
+    attributes:
+      value: Take your time filling this. This organization is run by volunteers and it helps us.
+  - type: markdown
+    attributes:
+      value: If you need real-time help, you can find us on Mattermost chat.pop-os.org /#cosmic-utils.
+
+  - type: input
+    id: username
+    attributes:
+      label: GitHub username
+      description: By default the one submitting issue is used. Would you like the use another one instead?
+      placeholder: only fill when needed
+    validations:
+      required: false
+
+  - type: textarea
+    id: interest-gauge
+    attributes:
+      label: What kind of contributions would you be making?
+      description: Or be interested in making in the future.
+      placeholder: I'd like to move my project, become a maintainer of an existing one, help with the website etc.
+    validations:
+      required: true
+
+  - type: textarea
+    id: cosmic-project-description
+    attributes:
+      label: COSMIC Project
+      description: Do you already have an existing COSMIC project?
+      placeholder: Describe the project
+    validations:
+      required: false
+
+  - type: input
+    id: cosmic-project-link
+    attributes:
+      label: Link to project
+      description: Where can we find it?
+      placeholder: e.g. example.com/cosmic-ext-milestone
+    validations:
+      required: false
